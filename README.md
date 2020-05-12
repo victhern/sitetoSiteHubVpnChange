@@ -1,4 +1,4 @@
-![Site to Site VPN Hub Update Demo]
+![Site to Site VPN Hub Change Demo]
 # Demo of Meraki Dashboard API Site to Site Hub Change
 
 Este archivo realiza cambios para las redes especificadas en un archivo .csv (Sites.CSV) para ser actualizadas al hub indicado y para ello se requiere obtener una lista de las redes configuradas en el Dashboard la cual se almacena en disco como NetSummary.csv y extrae la lista de Hubs existente para seleccionar el Hub destino.
@@ -6,18 +6,12 @@ Este archivo realiza cambios para las redes especificadas en un archivo .csv (Si
 
 Existen 3 funciones:
 
-1) Listar Redes y Hubs en archivo csv
-2) Cambiar VPNs de Hub
-3) Salir 
-
-
-1) Listar Redes y Hubs en archivo csv
+1) Listar Redes y Hubs en archivo csv. 
  La primer opción crea el arvhivo NetSummary.csv con la integración de la red y el contenido de la VPN sitio a sitio de cada red, así como un archivo HubList.csv que contiene la información únicamente de los Hubs.
 
  Esta opción también permite actualizar las etiquetas (Tags) a las redes para diferenciar sitios entre Spokes, Hubs y NoVPN adicionalmente permite agregar las etiquetas específicas a los Hubs diferenciando entre Principal y  Secundario mediante la búsqueda del texto BCKUP en el nombre.
 
  Los archivos a entregar y presentan las actualizaciones.
-
 
 2) Cambiar VPNs de Hub
  Esta opción permite ser ejecutada desde el principio si es que ya existe un archivo que contenga a los Hubs (buscando por defect el archivo HubList.csv y que requiere de un archivo (Sites.csv) donde se encuentren los sitios enlistados a moverse al hub destino.
@@ -25,7 +19,6 @@ Existen 3 funciones:
  La lista de sitios (Sites.csv por defecto) es evaluada para filtrar cualquier sitio que no contenga un appliance, que ya se encuentra configurado con el Hub en primario  o que se haya incluido un sitio que es hub en la lista. Esta lista actualizada se guarda con el nombre original y se hace una copia del original agregando "_old" al archivo respaldado.
 
  Adicionalmente se actualizan las etiquetas para identificar las sucursales que están referenciadas al Hub Primario o Backup mediante las etiquetas VPN@Primario y VPN@Backup de manera mutuamente excluyente.
-
 
 3) Salir
  Opción que como su nombre lo dice permite terminar el programa y salir de la ejecución del mismo.
