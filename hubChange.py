@@ -90,9 +90,9 @@ def main():
     user_name = None
 
     if 'test' in args:
-        # api_key = '15e8d3c9a4e8b44241800fcb92065883b01e8409'
-        # org_id = '578350'
-        # user_name = 'VicMac'
+        # api_key = 'Tu API KEY'
+        # org_id = 'Tu Organizacion'
+        # user_name = 'Tu Nombre'
         print('                                   **********       --- Test Mode ---       **********')
     # Obtener nombre y TAGs personalizados
     print()
